@@ -1,7 +1,5 @@
 # Template for C Projects
 
------
-
 This repository is a template to be used in new projects developed in C language.
 
 **Table of Contents**
@@ -11,7 +9,29 @@ This repository is a template to be used in new projects developed in C language
 
 ## How to use
 
-When create a new repository on GitHub use this a start template to create it.
+Este repositorio utiliza [pre-commit](https://pre-commit.com) para validaciones de formato. Para trabajar con el mismo usted debería tener instalado:
+
+1. pre-commit (https://pre-commit.com/#install)
+
+Después de clonar el repositorio usted debería ejecutar el siguiente comando:
+
+```
+pre-commit install
+```
+
+Para generar la documentación del proyecto se utiliza el siguiente comando:
+
+```
+make doc
+
+```
+
+Para compilar el proyecto se utiliza el siguiente comando:
+
+```
+make all
+
+```
 
 ## License
 
