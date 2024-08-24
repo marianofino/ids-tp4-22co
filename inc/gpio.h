@@ -43,6 +43,10 @@ extern "C" {
 
 /* === Public data type declarations =========================================================== */
 
+/**
+ * @brief Declaración de clase gpio_t
+ *
+ */
 typedef struct gpio_s * gpio_t;
 
 /* === Public variable declarations ============================================================ */
@@ -54,34 +58,34 @@ typedef struct gpio_s * gpio_t;
  * dinámicamente, sino, GPIO_MAX_INSTANCES define la cantidad maxima de instancias que se pueden
  * crear.
  *
- * @param puerto
- * @param pin
- * @return gpio_t
+ * @param puerto puerto al que corresponde el pin
+ * @param pin número de pin
+ * @return gpio_t manejador de gpio
  */
 gpio_t GpioCreate(uint8_t puerto, uint8_t pin);
 
 /**
  * @brief Define un gpio como salida
  *
- * @param self
- * @param output
+ * @param self gpio a configurar
+ * @param output configura al gpio como salida a true y como entrada a false
  */
 void GpioSetOutput(gpio_t self, bool output);
 
 /**
  * @brief Configura el estado de la salida como 1 o 0 según el valor de state
  *
- * @param self
- * @param state
+ * @param self gpio a configurar
+ * @param state configura el valor del estado del gpio
  */
 void GpioSetState(gpio_t self, bool state);
 
 /**
  * @brief Devuelve el estado del gpio
  *
- * @param self
- * @return true
- * @return false
+ * @param self gpio a configurar
+ * @return true gpio en alto/encendido
+ * @return false gpio en bajo/apagado
  */
 bool GpioGetState(gpio_t self);
 
