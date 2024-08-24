@@ -11,6 +11,7 @@
     },
     "files.associations": {
         "stddef.h": "c",
-        "gpio.h": "c"
+        "gpio.h": "c",
+        "stdint.h": "c"
     },
 }
