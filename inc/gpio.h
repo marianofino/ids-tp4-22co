@@ -19,14 +19,16 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 SPDX-License-Identifier: MIT
 *************************************************************************************************/
 
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef GPIO_H
+#define GPIO_H
 
-/** @file main.h
- ** @brief Definición de la función principal del programa
+/** @file gpio.h
+ ** @brief Definición de la clase gpio
  **/
 
 /* === Headers files inclusions ================================================================ */
+
+#include <stdbool.h>
 
 /* === Cabecera C++ ============================================================================ */
 
@@ -38,16 +40,47 @@ extern "C" {
 
 /* === Public data type declarations =========================================================== */
 
+typedef struct gpio_s * gpio_t;
+
 /* === Public variable declarations ============================================================ */
 
 /* === Public function declarations ============================================================ */
 
 /**
- * @brief Función principal del sistema, se ejecuta al iniciar el programa
+ * @brief Función que crea objeto y lo retorna. Utilizando #define USE_DYNAMIC_MEM, se crea
+ * dinámicamente, sino, GPIO_MAX_INSTANCES define la cantidad maxima de instancias que se pueden
+ * crear.
  *
- * @return int Valor de retorno, cero si esta todo bien, negativo si hay un error
+ * @param puerto
+ * @param pin
+ * @return gpio_t
  */
-int main(void);
+gpio_t GpioCreate(uint8_t puerto, uint8_t pin);
+
+/**
+ * @brief Define un gpio como salida
+ *
+ * @param self
+ * @param output
+ */
+void GpioSetOutput(gpio_t self, bool output);
+
+/**
+ * @brief Configura el estado de la salida como 1 o 0 según el valor de state
+ *
+ * @param self
+ * @param state
+ */
+void GpioSetState(gpio_t self, bool state);
+
+/**
+ * @brief Devuelve el estado del gpio
+ *
+ * @param self
+ * @return true
+ * @return false
+ */
+bool GpioGetState(gpio_t self);
 
 /* === End of documentation ==================================================================== */
 
@@ -55,4 +88,4 @@ int main(void);
 }
 #endif
 
-#endif /* MAIN_H */
+#endif /* GPIO_H */
