@@ -1,5 +1,5 @@
 /************************************************************************************************
-Copyright (c) 2023, Esteban Volentini <evolentini@herrera.unt.edu.ar>
+Copyright (c) 2024,
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
 associated documentation files (the "Software"), to deal in the Software without restriction,
@@ -48,16 +48,13 @@ SPDX-License-Identifier: MIT
 /* === Public function implementation ========================================================== */
 
 int main(void) {
-    // Configuro como salida
-    gpioSetDirection(LED_ROJO_PUERTO, LED_ROJO_BIT, true);
-    // Prendo el led
-    gpioSetOutput(LED_ROJO_PUERTO, LED_ROJO_BIT, true);
+  
 
     gpio_t led_rojo = gpioCreate(LED_ROJO_PUERTO, LED_ROJO_BIT);
     gpioSetOutput(led_rojo, true);
     gpioSetState(led_rojo, true);
 
-    led_rojo.gpioSetState(true);
+    
 }
 
 /* === End of documentation ==================================================================== */

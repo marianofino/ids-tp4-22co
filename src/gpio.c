@@ -1,4 +1,5 @@
 #include "gpio.h"
+#include <stdlib.h>
 #include <stddef.h>
 
 #define USE_DYNAMIC_MEM
@@ -15,7 +16,7 @@ struct gpio_s {
 };
 
 /**
- * @brief
+ * @brief funcion para reservar memoria estatica
  *
  * @return gpio_t
  */
@@ -34,6 +35,14 @@ static gpio_t allocateInstance() {
     return result;
 }
 
+/**
+ * @brief  funcion que crea la struct para los objetos
+ * 
+ * @param puerto 
+ * @param bit 
+ * @return gpio_t 
+ */
+
 gpio_t gpioCreate(uint8_t puerto, uint8_t bit) {
 #ifdef USE_DYNAMIC_MEM
     gpio_t self = malloc(sizeof(struct gpio_s));
@@ -48,14 +57,34 @@ gpio_t gpioCreate(uint8_t puerto, uint8_t bit) {
     return self;
 }
 
+/**
+ * @brief funcion para setear si es salida o entrada
+ * 
+ * @param self 
+ * @param output 
+ */
 void gpioSetOutput(gpio_t self, bool output) {
-    HAL_GPIO_SET_OUTPUT(self->port, self->bit);
+    //HAL_GPIO_SET_OUTPUT(self->port, self->bit);
 }
+
+/**
+ * @brief Funcion para setear el estado ON/OFF
+ * 
+ * @param self 
+ * @param state 
+ */
 
 void gpioSetState(gpio_t self, bool state) {
-    HAL_GPIO_SET_STATE(self->port, self->bit);
+    //HAL_GPIO_SET_STATE(self->port, self->bit);
 }
 
+/**
+ * @brief funcion para saber el estado
+ * 
+ * @param self 
+ * @return true 
+ * @return false 
+ */
 bool gpioGetState(gpio_t self) {
-    return HAL_GPIO_GET_STATE(self->port, self->bit);
+    return 1;//HAL_GPIO_GET_STATE(self->port, self->bit);
 }
