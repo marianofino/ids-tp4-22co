@@ -1,6 +1,6 @@
 # Trabajo Práctico 4
 
-Repositorio correspondiente al Trabajo Práctico 4 de la Especialización en Ingeniería de Software de la CESE, FIUBA.
+Repositorio correspondiente al Trabajo Práctico 4 de Ingeniería de Software de la CESE, FIUBA.
 
 ## Autor
 
