@@ -51,6 +51,7 @@ int main(void) {
   
 
     gpio_t led_rojo = gpioCreate(LED_ROJO_PUERTO, LED_ROJO_BIT);
+   
     gpioSetOutput(led_rojo, true);
     gpioSetState(led_rojo, true);
 
