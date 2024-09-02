@@ -75,14 +75,14 @@ SPDX-License-Identifier: MIT
 int main(void) {
 
     // Initialize the Red LED GPIO pin and turn it on
-    gpio_t led_red = gpioCreate(LED_RED_PORT, LED_RED_BIT);
-    gpioSetOutput(led_red, true);
-    gpioSetState(led_red, true);
+    gpio_t led_red = gpio_Create(LED_RED_PORT, LED_RED_BIT);
+    gpio_SetOutput(led_red, true);
+    gpio_SetState(led_red, true);
 
     // Initialize the Blue LED GPIO pin and turn it on
     gpio_t led_blue = gpio_Create(LED_BLUE_PORT, LED_BLUE_BIT);
-    gpioSetOutput(led_blue, true);
-    gpioSetState(led_blue, true);
+    gpio_SetOutput(led_blue, true);
+    gpio_SetState(led_blue, true);
 
     return 0; /**< Return 0 to indicate successful execution */
 }
