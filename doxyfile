@@ -1,0 +1,74 @@
+
+# Doxyfile 1.9.1
+
+# This file describes the settings to be used by the documentation system
+# doxygen (www.doxygen.org) for a project.
+# All text after a double hash (##) is considered a comment and is placed in
+# front of the TAG it is preceding.
+
+#---------------------------------------------------------------------------
+# Project related configuration options
+#---------------------------------------------------------------------------
+
+PROJECT_NAME           = "Trabajo Práctico 4 - IdS"
+PROJECT_BRIEF          = "Documentación del Trabajo Práctico 4 de Ingeniería de Software"
+OUTPUT_DIRECTORY       = "docs/doxy"
+INPUT                  = "inc/", "src/"
+RECURSIVE              = YES
+
+#---------------------------------------------------------------------------
+# Build related configuration options
+#---------------------------------------------------------------------------
+
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = NO
+EXTRACT_STATIC         = NO
+
+#---------------------------------------------------------------------------
+# Configuration options related to the input files
+#---------------------------------------------------------------------------
+
+FILE_PATTERNS          = *.cpp *.h *.c
+
+#---------------------------------------------------------------------------
+# Configuration options related to the HTML output
+#---------------------------------------------------------------------------
+
+GENERATE_HTML          = YES
+HTML_OUTPUT            = html
+
+#---------------------------------------------------------------------------
+# Configuration options related to the LaTeX output
+#---------------------------------------------------------------------------
+
+GENERATE_LATEX         = NO
+
+#---------------------------------------------------------------------------
+# Configuration options related to the man page output
+#---------------------------------------------------------------------------
+
+GENERATE_MAN           = NO
+
+#---------------------------------------------------------------------------
+# Configuration options related to the XML output
+#---------------------------------------------------------------------------
+
+GENERATE_XML           = NO
+
+#---------------------------------------------------------------------------
+# Configuration options related to the RTF output
+#---------------------------------------------------------------------------
+
+GENERATE_RTF           = NO
+
+#---------------------------------------------------------------------------
+# Configuration options related to the tag file
+#---------------------------------------------------------------------------
+
+GENERATE_TAGFILE       = NO
+
+#---------------------------------------------------------------------------
+# Configuration options related to the dot tool
+#---------------------------------------------------------------------------
+
+HAVE_DOT               = NO
