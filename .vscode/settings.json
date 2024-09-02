@@ -1,11 +1,11 @@
 {
     "editor.codeActionsOnSave": {
-        "source.fixAll": true
+        "source.fixAll": "explicit"
     },
     "editor.formatOnSave": true,
     "[c]": {
         "editor.defaultFormatter": "xaver.clang-format",
-        "editor.wordBasedSuggestions": false,
+        "editor.wordBasedSuggestions": "off",
         "editor.suggest.insertMode": "replace",
         "editor.semanticHighlighting.enabled": true
     },
@@ -22,5 +22,9 @@
         "**/__pycache__": true,
         ".pytest_cache": true,
         ".coverage": true
+    },
+    "files.associations": {
+        "gpio.h": "c",
+        "main.h": "c"
     }
 }
