@@ -1,18 +1,39 @@
-# Template for C Projects
+# Trabajo Práctico Nro 4 
 
------
+Trabajo práctico n°4 de la materia Ingenieria de Software del CESE, FIUBA.
 
-This repository is a template to be used in new projects developed in C language.
+## Autor
+Ing. Pablo E. Gimenez <<pegimenez@fi.uba.ar>>
 
-**Table of Contents**
+**Tabla de contenidos**
 
-- [How to use](#How-to-use)
-- [License](#license)
+- [Pre-requisitos](#Pre-requisitos)
+- [Pasos a seguir](#Pasos-a-seguir)
+- [Licencia](#Licencia)
 
-## How to use
+## Pre-requisitos
 
-When create a new repository on GitHub use this a start template to create it.
+Este repositorio utiliza las siguientes herramientas. Por favor instalar las mismas para continuar con el desarrollo normal.
 
-## License
+1. [pre-commit](https://pre-commit.com/#install) utilizado para validaciones de formato previo push.
+2. [make](https://www.gnu.org/software/make) utilizado para generar la compilación de los codigos fuentes del proyecto.
+3. [doxygen](https://www.doxygen.nl/) utilizado para generar la documentación del proyecto.
 
-This template is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
+## Pasos a seguir
+
+1. Instalar pre-commit
+```bash
+sudo apt install pre-commit
+```
+
+2. Compilar proyecto
+```bash
+make all
+```
+3. Generar documentación
+```bash
+make doc
+```
+## Licencia
+
+Este repositorio es distribuido bajo licencia de [MIT](https://spdx.org/licenses/MIT.html).
