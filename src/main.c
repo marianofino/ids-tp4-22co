@@ -30,8 +30,8 @@ SPDX-License-Identifier: MIT
 
 /* === Macros definitions ====================================================================== */
 
-#define LED_ROJO_PUERTO 1
-#define LED_ROJO_BIT    7
+#define LED_ROJO_PUERTO 2
+#define LED_ROJO_BIT    2
 
 /* === Private data type declarations ========================================================== */
 
@@ -51,13 +51,13 @@ int main(void) {
     // Configuro como salida
     gpioSetDirection(LED_ROJO_PUERTO, LED_ROJO_BIT, true);
     // Prendo el led
-    gpioSetOutput(LED_ROJO_PUERTO, LED_ROJO_BIT, true);
+    gpioSetOutput(LED_ROJO_PUERTO, LED_ROJO_BIT, false);
 
     gpio_t led_rojo = gpioCreate(LED_ROJO_PUERTO, LED_ROJO_BIT);
     gpioSetOutput(led_rojo, true);
     gpioSetState(led_rojo, true);
 
-    led_rojo.gpioSetState(true)
+    led_rojo.gpioSetState(false)
 }
 
 /* === End of documentation ==================================================================== */
